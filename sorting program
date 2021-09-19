@@ -1,0 +1,19 @@
+import random
+numbers = str(input("How many numbers?"))
+string = input("Please input " +  numbers + " numbers.")
+list = string.split()
+numbers = int(numbers)
+numbers2 = numbers
+counter2 = 0
+for n in range(0,numbers-1):
+        counter = 1
+        for i in range(1,numbers2):
+                value1 = list[counter2]
+                value2 = list[numbers-counter]
+                if value1 > value2:
+                  list[counter2], list[numbers-counter] = list[numbers-counter], list[counter2]
+                print(list)
+                counter = counter + 1
+        counter2 = counter2 + 1
+        numbers2 = numbers2 - 1
+print(list)
